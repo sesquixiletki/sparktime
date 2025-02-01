@@ -16,4 +16,3 @@ Please include the full date, name and a short explanation of the event/holiday.
         <p>insert quote</p>
     </div>
   </div>
-</div>
