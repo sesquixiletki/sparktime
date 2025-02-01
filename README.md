@@ -1,6 +1,6 @@
 <body style = "background-color: #334455;">
     <div style = "background-color: #556677;">
-        <div style = "background-color: #D07023; padding: 20px;">
+        <div style = "background-color: #F07023; padding: 20px;">
             <h1><font color = "white"><center><a href = "https://sesquixiletki.github.io/sparktime" style = "text-decoration: none; color:                     inherit;">SparkTime</a></center></font></h1>
         </div>
 
@@ -22,7 +22,7 @@
 
 </body>
 <footer>
-    <div style = "background-color: #D07023; margin-top: 20px; padding: 20px;"><center>Developed by sesqui细летки<br>
+    <div style = "background-color: #F07023; margin-top: 20px; padding: 20px;"><center>Developed by sesqui细летки<br>
     All rights reserved or smth</center></div>
 </footer>
 
