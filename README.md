@@ -13,7 +13,7 @@
                 <h3>Column 1</h3>
                 <p>insert calender</p>
             </div>
-            <div style="flex: 1; padding: 10px; border: 1px solid #ddd; padding: 20px; margin-right: 20px;">
+            <div style="flex: 1; padding: 10px; border: 1px solid #ddd;">
                 <h3>Column 2</h3>
                 <p>insert quote</p>
             </div>
