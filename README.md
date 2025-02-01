@@ -6,7 +6,7 @@
 
 
 <div style="display: flex; gap: 20px;">
-    <div style="flex: 1; padding: 10px; border: 1px solid #ddd;">
+    <div style="flex: 2; padding: 10px; border: 1px solid #ddd;">
         <h3>Column 1</h3>
         <p>insert calender</p>
     </div>
@@ -17,7 +17,7 @@
 </div>
 
 
-Developed by sesqui细летки  
+Developed by sesqui细летки<br>
 All rights reserved or smth
 
 </body>
