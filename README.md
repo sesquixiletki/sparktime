@@ -18,10 +18,12 @@
                 <p>insert quote</p>
             </div>
         </div>
-    
-
-
-        <div style = "background-color: #B82601; padding: 10px; margin-top: 20px;">Developed by sesqui细летки<br>
-        All rights reserved or smth</div>
     </div>
+
 </body>
+<footer>
+    <div style = "background-color: #B82601; margin-top: 20px;"><center>Developed by sesqui细летки<br>
+    All rights reserved or smth</center></div>
+</footer>
+
+
