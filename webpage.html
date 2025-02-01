@@ -61,7 +61,13 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
          .column2 {
-            background-image: url("final orange pic.webp");
+            width: 80%; /* Set container width */
+            max-width: 1200px;
+            margin: 0 auto;
+            background-image: url('final orange pic.webp');
+            background-size: contain; /* Ensures the whole image is visible */
+            background-repeat: no-repeat;
+            background-position: center;
             padding: 20px;
             border-radius: 8px;
             flex: 1;
