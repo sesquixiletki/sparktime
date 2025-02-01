@@ -17,7 +17,7 @@
 </div>
 
 
-<div style = "background-color: #B82601; padding: 10px; margin-top: 20x;">Developed by sesqui细летки<br>
+<div style = "background-color: #B82601; padding: 10px; margin-top: 20px;">Developed by sesqui细летки<br>
 All rights reserved or smth</div>
 
 </body>
