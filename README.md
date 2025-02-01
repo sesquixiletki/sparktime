@@ -1,3 +1,8 @@
+<html>
+<head>
+  <title>SparkTime: A calendar that fuels your days with meaning</title>
+
+</head>
 # <a href = "https://sesquixiletki.github.io/sparktime/webpage.html">SparkTime</a>
 
 by sesqui细летки
