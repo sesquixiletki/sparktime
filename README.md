@@ -1,3 +1,5 @@
+<meta http-equiv="refresh" content="0; url=webpage.html">
+
 <body style = "background-color: #334455;">
     <div style = "background-color: #556677;">
         <div style = "background-color: #F07023; padding: 20px;">
