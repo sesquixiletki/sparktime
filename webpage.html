@@ -39,11 +39,19 @@
             padding: 20px;
         }
 
-        .column {
+        .column1 {
             background-color: #556677;
             padding: 20px;
             border-radius: 8px;
             flex: 2;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+         .column2 {
+            background-color: #556677;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
             min-width: 300px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -93,14 +101,14 @@
     </header>
 
     <div class="content">
-        <div class="column">
+        <div class="column1">
             <h3>Calendar</h3>
             <div class="calendar">
                 <!-- Calendar API Integration will go here -->
                 <p>Insert calendar here</p>
             </div>
         </div>
-        <div class="column">
+        <div class="column2">
             <h3>Quote of the Day</h3>
             <div class="quote">
                 <!-- Quote API Integration will go here -->
