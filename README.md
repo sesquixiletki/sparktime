@@ -3,7 +3,17 @@
 
 by sesqui细летки
 
-<div style = "display: flex;">
-<div style = "flex: 1; padding: 10px; border: 1px solid #ddd;">Please include the full date, name and a short explanation of the event/holiday. This description can include culture significance, or a story (real or legend) of what took place. </div>
-<div style = "flex: 1;padding: 10px; border: 1px solid #ddd;">insert quote</div>
+        <p>Please include the full date, name and a short explanation of the event/holiday. This description can include culture significance, or a story (real or legend) of what took place. </p>
+
+
+<div style="display: flex; gap: 20px;">
+    <div style="flex: 1; padding: 10px; border: 1px solid #ddd;">
+        <h3>Column 1</h3>
+        <p>insert calender</p>
+    </div>
+    <div style="flex: 1; padding: 10px; border: 1px solid #ddd;">
+        <h3>Column 2</h3>
+        <p>insert quote</p>
+    </div>
+  </div>
 </div>
