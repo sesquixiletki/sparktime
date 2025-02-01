@@ -1,6 +1,6 @@
 <body style = "background-color: #334455;">
     <div style = "background-color: #556677;">
-        <div style = "background-color: #B08001; padding: 20px;">
+        <div style = "background-color: #B05001; padding: 20px;">
             <h1><font color = "white"><center><a href = "https://sesquixiletki.github.io/sparktime" style = "text-decoration: none; color:                     inherit;">SparkTime</a></center></font></h1>
         </div>
 
