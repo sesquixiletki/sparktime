@@ -6,7 +6,7 @@
 
 
 
-        <div style = "padding: 20px;">Please include the full date, name and a short explanation of the event/holiday. This description can include cultural                           significance, or a story (real or legend) of what took place.</div>
+        <div style = "padding: 20px; margin-top: 20px;">Please include the full date, name and a short explanation of the event/holiday. This description can include cultural significance, or a story (real or legend) of what took place.</div>
 
         <div style="display: flex; gap: 20px; padding: 20px;">
             <div style="flex: 2; padding: 10px; border: 1px solid #ddd;">
