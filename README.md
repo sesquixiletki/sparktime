@@ -17,7 +17,7 @@
 </div>
 
 
-Developed by sesqui细летки<br>
-All rights reserved or smth
+<div style = "background-color: #B82601;">Developed by sesqui细летки<br>
+All rights reserved or smth</div>
 
 </body>
