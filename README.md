@@ -6,14 +6,14 @@
 
 
 
-        <div>Please include the full date, name and a short explanation of the event/holiday. This description can include cultural                           significance, or a story (real or legend) of what took place.</div>
+        <div style = "padding: 20px;">Please include the full date, name and a short explanation of the event/holiday. This description can include cultural                           significance, or a story (real or legend) of what took place.</div>
 
-        <div style="display: flex; gap: 20px;">
+        <div style="display: flex; gap: 20px; padding: 20px; margin-left: 20px;">
             <div style="flex: 2; padding: 10px; border: 1px solid #ddd;">
                 <h3>Column 1</h3>
                 <p>insert calender</p>
             </div>
-            <div style="flex: 1; padding: 10px; border: 1px solid #ddd;">
+            <div style="flex: 1; padding: 10px; border: 1px solid #ddd; padding: 20px; margin-right: 20px;">
                 <h3>Column 2</h3>
                 <p>insert quote</p>
             </div>
