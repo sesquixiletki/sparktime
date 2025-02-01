@@ -1,9 +1,7 @@
 
-# <a href = "https://sesquixiletki.github.io/sparktime/webpage.html">SparkTime</a>
-
-by sesqui细летки
-
-Please include the full date, name and a short explanation of the event/holiday. This description can include culture significance, or a story (real or legend) of what took place.
+# <a href = "https://sesquixiletki.github.io/sparktime">SparkTime</a>
+<body style = "background-color: #111111;">
+<div>Please include the full date, name and a short explanation of the event/holiday. This description can include cultural significance, or a story (real or legend) of what took place.</div>
 
 
 <div style="display: flex; gap: 20px;">
@@ -15,4 +13,10 @@ Please include the full date, name and a short explanation of the event/holiday.
         <h3>Column 2</h3>
         <p>insert quote</p>
     </div>
-  </div>
+</div>
+
+
+Developed by sesqui细летки
+All rights reserved or smth
+
+</body>
