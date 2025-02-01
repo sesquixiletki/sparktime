@@ -1,26 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SparkTime: A calendar that fuels your days with meaning</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkTime</title>
+    <style>
+        /* General reset and body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #334455;
+            color: white;
+        }
 
+        /* Header styling */
+        header {
+            background-color: #F07023;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        /* Main content container */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .column {
+            background-color: #556677;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .column h3 {
+            margin-top: 0;
+            color: #F07023;
+        }
+
+        .calendar, .quote {
+            background-color: #F4F4F4;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            height: 250px; /* Adjust as necessary for content */
+            overflow-y: auto;
+        }
+
+        .calendar {
+            background-color: #ffffff;
+        }
+
+        .quote {
+            font-style: italic;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #F07023;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1><a href="https://sesquixiletki.github.io/sparktime">SparkTime</a></h1>
+    </header>
 
-  <div><h1><a href = "https://sesquixiletki.github.io/sparktime/webpage.html">SparkTime</a></h1></div>
-  <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus eu ipsum eget facilisis. Duis sit amet nisi quis ante lacinia consectetur vitae tincidunt tortor. Sed cursus diam a convallis placerat. Suspendisse accumsan, dolor ac tempus tristique, nibh augue vestibulum neque, non auctor felis sem at elit. Phasellus ornare quis nisl ut laoreet. Cras in nunc at felis elementum ultrices porta quis felis. Quisque rhoncus bibendum tellus ac dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas nulla eleifend ipsum tempus ornare. Nulla vel justo augue.</p></div>
-  <div style="display: flex; gap: 20px;">
-    <div style="flex: 1; padding: 10px; border: 1px solid #ddd;">
-        <h3>Column 1</h3>
-        <p>Content for the first column.</p>
+    <div class="content">
+        <div class="column">
+            <h3>Calendar</h3>
+            <div class="calendar">
+                <!-- Calendar API Integration will go here -->
+                <p>Insert calendar here</p>
+            </div>
+        </div>
+        <div class="column">
+            <h3>Quote of the Day</h3>
+            <div class="quote">
+                <!-- Quote API Integration will go here -->
+                <p>Insert quote here</p>
+            </div>
+        </div>
     </div>
-    <div style="flex: 1; padding: 10px; border: 1px solid #ddd;">
-        <h3>Column 2</h3>
-        <p>Content for the second column.</p>
-    </div>
-  </div>
+
+    <footer>
+        <p>Developed by sesqui细летки<br>All rights reserved or smth</p>
+    </footer>
 </body>
-<footer>
-  <p>Developed by sesqui细летки</p>
-  <p>All rights reserved or smth</p>
-</footer>
 </html>
