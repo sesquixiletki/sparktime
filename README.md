@@ -22,7 +22,7 @@
 
 </body>
 <footer>
-    <div style = "background-color: #B82601; margin-top: 20px;"><center>Developed by sesqui细летки<br>
+    <div style = "background-color: #B82601; margin-top: 20px; padding: 20px;"><center>Developed by sesqui细летки<br>
     All rights reserved or smth</center></div>
 </footer>
 
