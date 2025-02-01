@@ -1,6 +1,6 @@
 
 # <a href = "https://sesquixiletki.github.io/sparktime">SparkTime</a>
-<body style = "background-color: #111111;">
+<body style = "background-color: #555555;">
 <div>Please include the full date, name and a short explanation of the event/holiday. This description can include cultural significance, or a story (real or legend) of what took place.</div>
 
 
