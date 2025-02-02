@@ -155,7 +155,39 @@
         });
         
     </script>
-
+    <div class="content">
+        <div class="column1">
+            <h3>Calendar</h3>
+            <div class="calendar">
+                <!-- Calendar API Integration will go here -->
+                <p>Insert calendar here</p>
+            </div>
+        </div>
+        <div class="column2">
+            <h3>Quote of the Day</h3>
+            <div class="quote">
+                <!-- PyScript CSS -->
+                <link rel="stylesheet" href="https://pyscript.net/releases/2024.5.2/core.css">
+                <!-- This script tag bootstraps PyScript -->
+                <script type="module" src="https://pyscript.net/releases/2024.5.2/core.js"></script>
+            </head>
+            <body>
+                import sys
+                from pyscript import display
+                def get_quote():
+                    site = requests.get("https://thequoteshub.com/api/tags/tomorrow")
+                    data = site.json()
+                    quote = random.choice(data['quotes'])
+                    return (quote['text'] + " - " + quote['author']) 
+                # print(tell_joke())
+                print(get_quote())
+                
+                display(sys.version)
+            </body>
+                <p>Insert quote here</p>
+            </div>
+        </div>
+    </div>
     
 
     <footer>
