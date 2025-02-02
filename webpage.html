@@ -45,6 +45,17 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             background-color: #556677;
         }
+        .rd {
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 2;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #556677;
+        }
         .content {
             display: flex;
             flex-wrap: wrap;
@@ -129,14 +140,14 @@
     </header>
     <div class = "intro">Please include the full date, name and a short explanation of the event/holiday. This description can include cultural significance, or a story (real or legend) of what took place.</div>
 
-    
-    <h2>Retrieved Data:</h2>
-    <p id="receivedDate"></p>
-    <p id="receivedDesc"></p>
-    
-    <a href="form.html"> 
-    <button> submit an event </button> </a>
-
+    <div class = "rd">
+        <h2>Retrieved Data:</h2>
+        <p id="receivedDate"></p>
+        <p id="receivedDesc"></p>
+        
+        <a href="form.html"> 
+        <button> submit an event </button> </a>
+    </div>
 
     <script>
         let date = localStorage.getItem("Date");
