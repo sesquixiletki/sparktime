@@ -181,8 +181,10 @@
                     quote = random.choice(data['quotes'])
                     return (quote['text'] + " - " + quote['author']) 
                     # print(tell_joke())
-                    print(get_quote())
-                    display(get_quote())
+                    w = get_quote()
+                    print(e)
+                    display(e)
+                    Element('quote').element.innerText = e
                 </py-script>
             </body>
             </div>
