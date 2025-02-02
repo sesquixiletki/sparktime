@@ -173,6 +173,9 @@
             </head>
             <body>
                 <py-script>
+                    import requests
+                    import json
+                    import random
                     def get_quote():
                         site = requests.get("https://thequoteshub.com/api/tags/tomorrow")
                         data = site.json()
@@ -182,8 +185,8 @@
                     pyscript.write('quote', w)
                 </py-script>
             </body>
-            Element('quote').element.innerText = w
-
+<!--             Element('quote').element.innerText = w
+ -->
         </div>
     </div>
 
