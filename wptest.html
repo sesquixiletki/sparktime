@@ -172,18 +172,17 @@
                 <script type="module" src="https://pyscript.net/releases/2024.5.2/core.js"></script>
             </head>
             <body>
-                <py-config type="toml">
-                    packages = ["requests"]
-                </py-config>
                 <py-script>
-                    import random
-                    def get_quote():
-                        site = requests.get("https://thequoteshub.com/api/tags/tomorrow")
-                        data = site.json()
-                        quote = random.choice(data['quotes'])
-                        return (quote['text'] + " - " + quote['author']) 
-                    w = get_quote()
-                    pyscript.write('quote', w)
+from pyodide.http import pyfetch
+import asyncio
+import random
+def get_quote():
+    site = await pyfetch(url="https://thequoteshub.com/api/tags/tomorrow", method="GET")
+    data = site.json()
+    quote = random.choice(data['quotes'])
+    return (quote['text'] + " - " + quote['author']) 
+w = get_quote()
+pyscript.write('quote', w)
                 </py-script>
             </body>
 <!--             Element('quote').element.innerText = w
