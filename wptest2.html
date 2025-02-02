@@ -118,8 +118,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const outputElement = document.getElementById('quote'); // Ensure correct ID
-            const apiUrl = 'https://api.allorigins.win/raw?url=https://thequoteshub.com/api/tags/tomorrow'; // Use a CORS proxy
-    
+            const apiUrl = 'https://api.allorigins.win/raw?url=https://thequoteshub.com/api/tags/tomorrow';
+            
             fetch(apiUrl)
                 .then(response => response.json())
                 .then(data => {
