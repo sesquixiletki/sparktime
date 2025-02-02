@@ -180,15 +180,13 @@
                         data = site.json()
                         quote = random.choice(data['quotes'])
                         return (quote['text'] + " - " + quote['author']) 
-                    # print(tell_joke())
                     w = get_quote()
                     pyscript.write('quote', w)
-
                     print(w)
                     display(w)
-                    Element('quote').element.innerText = w
                 </py-script>
-                
+                Element('quote').element.innerText = w
+
             </body>
         </div>
     </div>
