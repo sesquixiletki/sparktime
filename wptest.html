@@ -182,7 +182,7 @@ async def get_quote():
     quote = random.choice(data['quotes'])
     return (quote['text'] + " - " + quote['author']) 
 w = get_quote()
-pyscript.write('quote', w)
+print(w)
                 </py-script>
             </body>
 <!--             Element('quote').element.innerText = w
