@@ -128,11 +128,18 @@
         <h1><a href="https://sesquixiletki.github.io/sparktime">SparkTime</a></h1>
     </header>
     <div class = "intro">To submit an event, please fill in the below form.</div>
-    <py-script> 
-        title = input("What is the name of this event or holiday? ") 
-        description = input("Please provide a short description of this event. ")
+    <label for="userInput">Enter the date:</label>
+    <input type="text" id="userInput">
+    <button onclick="processInput()">Submit</button>
+
+    <p id="output"></p>
+    <script> 
+        function processInput(){
+            let inputText = document.getElementByID("userInput").value;
+            document.getElementByID("output").innerText = "You Entered: " + inputText
+        }
         
-    </py-script>
+    </script>
 
     
 
