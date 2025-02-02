@@ -173,8 +173,6 @@
             </head>
             <body>
                 <py-script>
-                    import sys
-                    from pyscript import display
                     def get_quote():
                         site = requests.get("https://thequoteshub.com/api/tags/tomorrow")
                         data = site.json()
@@ -182,10 +180,9 @@
                         return (quote['text'] + " - " + quote['author']) 
                     w = get_quote()
                     pyscript.write('quote', w)
-                    print(w)
-                    display(w)
+                    Element('quote').element.innerText = w
+
                 </py-script>
-                Element('quote').element.innerText = w
 
             </body>
         </div>
