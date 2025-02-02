@@ -172,7 +172,32 @@
                 <script type="module" src="https://pyscript.net/releases/2024.5.2/core.js"></script>
             </head>
             <body>
-                <script>
+                  <button id="fetchData">Fetch Data</button>
+                  <script>
+                    document.getElementById('fetchData').addEventListener('click', () => {
+                      const dataContainer = document.getElementById('data');
+                      const errorContainer = document.getElementById('error');
+                
+                      // Clear previous data and errors
+                      dataContainer.textContent = '';
+                      errorContainer.textContent = '';
+                
+                      fetch('https://thequoteshub.com/api/tags/tomorrow')
+                        .then(response => {
+                          if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                          }
+                          return response.json();
+                        })
+                        .then(parsedData => {
+                          dataContainer.textContent = JSON.stringify(parsedData, null, 2);
+                        })
+                        .catch(error => {
+                          errorContainer.textContent = `Error fetching data: ${error.message}`;
+                        });
+                    });
+                  </script>
+<!--                 <script>
                   async function getRandomQuote() {
                       const url = "https://raw.githubusercontent.com/saip007/inspirational-quotes/main/inspirational_quotes/quotes.json";
                   
@@ -197,7 +222,7 @@
                   }
                   ('column2').innerText = getRandomQuote();
 
-                </script>
+                </script> -->
                 </div>
 
             </body>
