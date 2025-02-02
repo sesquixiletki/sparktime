@@ -188,9 +188,12 @@
                             throw new Error(`HTTP error! Status: ${response.status}`);
                           }
                           return response.json();
+                                    const quotes = await response.json();
                         })
                         .then(parsedData => {
-                          dataContainer.textContent = JSON.stringify(parsedData, null, 2);
+                            const randomIndex = Math.floor(Math.random() * quotes.length);
+
+                          dataContainer.textContent = JSON.stringify(parsedData['quotes'][randomindex], null, 2);
                         })
                         .catch(error => {
                           errorContainer.textContent = `Error fetching data: ${error.message}`;
