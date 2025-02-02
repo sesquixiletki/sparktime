@@ -173,10 +173,10 @@
             </head>
             <body>
                 <py-config type="toml">
-                    packages = ["requests","random"]
+                    packages = ["requests"]
                 </py-config>
                 <py-script>
-
+                    import random
                     def get_quote():
                         site = requests.get("https://thequoteshub.com/api/tags/tomorrow")
                         data = site.json()
