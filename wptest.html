@@ -61,7 +61,14 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
          .column2 {
-            background-image: url("final orange pic.webp");
+            /*height: 100%;  Set container width */
+            width: 100%; /* Full width */
+            min-height: 300px; /* Ensures a minimum height (optional) */
+            background-image: url('final orange pic.webp');
+            background-size: auto 100%; /* Height always matches div, width adjusts */
+            background-repeat: no-repeat;
+            background-position: center; /* Centers the image horizontally */
+            overflow: hidden; /* Ensures no unwanted scrollbars */
             padding: 20px;
             border-radius: 8px;
             flex: 1;
@@ -120,32 +127,14 @@
     <header>
         <h1><a href="https://sesquixiletki.github.io/sparktime">SparkTime</a></h1>
     </header>
-    <div class = "intro">Please include the full date, name and a short explanation of the event/holiday. This description can include cultural significance, or a story (real or legend) of what took place.</div>
+    <div class = "intro">To submit an event, please fill in the below form.</div>
+    <py-script> 
+        title = input("What is the name of this event or holiday? ") 
+        description = input("Please provide a short description of this event. ")
+        
+    </py-script>
 
-
-    <div class="content">
-        <div class="column1">
-            <h3>Calendar</h3>
-            <div class="calendar">
-                <!-- Calendar API Integration will go here -->
-                <p>Insert calendar here</p>
-            </div>
-        </div>
-        <div class="column2">
-            <h3>Quote of the Day</h3>
-            <div class="quote">
-                <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-
-                <py-script>
-                def get_quote():
-                    site = requests.get("https://thequoteshub.com/api/tags/tomorrow")
-                    data = site.json()
-                    Element('output_result').element.innerText = random.choice(data['quotes'])['text']
-                </py-script>
-                <p>output_result</p>
-            </div>
-        </div>
-    </div>
+    
 
     <footer>
         <p>Developed by sesqui细летки<br>All rights reserved or smth</p>
