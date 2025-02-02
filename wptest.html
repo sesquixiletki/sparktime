@@ -127,17 +127,15 @@
     <header>
         <h1><a href="https://sesquixiletki.github.io/sparktime">SparkTime</a></h1>
     </header>
-    <div class = "intro">To submit an event, please fill in the below form.</div>
-    <label for="userInput">Enter the date:</label>
+    <label for="userInput">Enter date:</label>
     <input type="text" id="userInput">
-    <button onclick="processInput()">Submit</button>
-
+    <button id="submitButton">Submit</button>
     <p id="output"></p>
     <script> 
-        function processInput(){
-            let inputText = document.getElementByID("userInput").value;
-            document.getElementByID("output").innerText = "You Entered: " + inputText;
-        }
+        document.getElementById("submitButton").addEventListener("click", function() {
+            let inputText = document.getElementById("userInput").value;
+            document.getElementById("output").innerText = "You entered: " + inputText;
+        });
         
     </script>
 
