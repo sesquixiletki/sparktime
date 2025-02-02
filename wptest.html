@@ -173,13 +173,10 @@
             </head>
             <body>
                 <py-config type="toml">
-                    packages = ["requests"]
+                    packages = ["requests","random"]
                 </py-config>
                 <py-script>
-                    micropip.install("requests")
-                    import requests
-                    import json
-                    import random
+
                     def get_quote():
                         site = requests.get("https://thequoteshub.com/api/tags/tomorrow")
                         data = site.json()
