@@ -176,10 +176,10 @@
                     import sys
                     from pyscript import display
                     def get_quote():
-                    site = requests.get("https://thequoteshub.com/api/tags/tomorrow")
-                    data = site.json()
-                    quote = random.choice(data['quotes'])
-                    return (quote['text'] + " - " + quote['author']) 
+                        site = requests.get("https://thequoteshub.com/api/tags/tomorrow")
+                        data = site.json()
+                        quote = random.choice(data['quotes'])
+                        return (quote['text'] + " - " + quote['author']) 
                     # print(tell_joke())
                     w = get_quote()
                     print(e)
