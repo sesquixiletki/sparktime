@@ -148,10 +148,12 @@
                     })
                     .then(data => {
                         if(data.length >0){
-                            const index = Math.floor(Math.random() * data.length);
+                            outputElement.textContent = "CHOCOATE BRED OR SOMETHING";
+
+                            // const index = Math.floor(Math.random() * data.length);
                         }
                       // Display data in an HTML element
-                      outputElement.textContent = "BAGUETTE OR SOMETHING";
+                      // outputElement.textContent = "BAGUETTE OR SOMETHING";
                     })
                     .catch(error => {
                       console.error('Error:', error);
