@@ -117,22 +117,16 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            //const apiUrl = 'https://thequoteshub.com/api/tags/tomorrow';
-            const apiUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://thequoteshub.com/api/tags/tomorrow');
-
-            const outputElement = document.getElementById('quote'); // Select the correct element
-
+            const outputElement = document.getElementById('quote'); // Ensure correct ID
+            const apiUrl = 'https://api.allorigins.win/raw?url=https://thequoteshub.com/api/tags/tomorrow'; // Use a CORS proxy
+    
             fetch(apiUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('oof skill issue'); // Error message
-                    }
-                    return response.json();
-                })
+                .then(response => response.json())
                 .then(data => {
-                    if (data.length > 0) {
-                        const randomIndex = Math.floor(Math.random() * data.length); // Pick a random quote
-                        outputElement.textContent = data[randomIndex].text; // Display the quote
+                    console.log(data); // Debugging: Check API response in Console
+                    if (Array.isArray(data) && data.length > 0) {
+                        const randomIndex = Math.floor(Math.random() * data.length);
+                        outputElement.textContent = data[randomIndex].text; // Display quote
                     } else {
                         outputElement.textContent = "No quotes found.";
                     }
