@@ -132,9 +132,11 @@
     <input type="text" id="dateInput">
     <button id="submitDate">Submit</button>
     <p id="date"></p>
+     <a href="webpage.html">Go to home page</a>
     <script> 
         document.getElementById("submitDate").addEventListener("click", function() {
             let inputDate = document.getElementById("dateInput").value;
+            localStorage.setItem("Date", inputDate);
             document.getElementById("date").innerText = "You entered: " + inputDate;
         });
         
@@ -144,9 +146,11 @@
     <input type="text" id="descInput">
     <button id="submitDesc">Submit</button>
     <p id="desc"></p>
+    <a href="webpage.html">Go to home page</a>
     <script> 
         document.getElementById("submitDesc").addEventListener("click", function() {
             let inputDesc = document.getElementById("descInput").value;
+            localStorage.setItem("Description", inputDesc);
             document.getElementById("desc").innerText = "You entered: " + inputDesc;
         });
         
