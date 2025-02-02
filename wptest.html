@@ -180,11 +180,10 @@
                         return (quote['text'] + " - " + quote['author']) 
                     w = get_quote()
                     pyscript.write('quote', w)
-                    Element('quote').element.innerText = w
-
                 </py-script>
-
             </body>
+            Element('quote').element.innerText = w
+
         </div>
     </div>
 
