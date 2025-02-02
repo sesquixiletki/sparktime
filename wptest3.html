@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkTime</title>
+    <style>
+        /* General reset and body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0 auto;
+            
+            padding: 0;
+            background-color: #334455;
+            color: white;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #F07023;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+            font-family: "Arial black", Gadget, sans-serif;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        /* Main content container */
+        .intro {
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 2;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #556677;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .column1 {
+            background-color: #556677;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 2;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+         .column2 {
+            /*height: 100%;  Set container width */
+            width: 100%; /* Full width */
+            min-height: 300px; /* Ensures a minimum height (optional) */
+            background-image: url('final orange pic.webp');
+            background-size: auto 100%; /* Height always matches div, width adjusts */
+            background-repeat: no-repeat;
+            background-position: center; /* Centers the image horizontally */
+            overflow: hidden; /* Ensures no unwanted scrollbars */
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .column h3 {
+            margin-top: 0;
+            color: #F07023;
+        }
+
+        .calendar{
+            background-color: #F4F4F4;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            height: 250px; /* Adjust as necessary for content */
+            overflow-y: auto;
+        }
+        .quote {
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            height: 250px; /* Adjust as necessary for content */
+            overflow-y: auto;
+        }
+
+
+        .calendar {
+            background-color: #ffffff;
+        }
+
+        .quote {
+            font-style: italic;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #F07023;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="https://sesquixiletki.github.io/sparktime">SparkTime</a></h1>
+    </header>
+
+    <label for="dateInput">Enter date:</label>
+    <input type="text" id="dateInput">
+    <button id="submitDate">Submit</button>
+    <p id="date"></p>
+     <a href="webpage.html">Go to home page</a>
+    <script> 
+        document.getElementById("submitDate").addEventListener("click", function() {
+            let inputDate = document.getElementById("dateInput").value;
+            localStorage.setItem("Date", inputDate);
+            document.getElementById("date").innerText = "You entered: " + inputDate;
+        });
+        
+    </script>
+
+    <label for="descInput">Enter description:</label>
+    <input type="text" id="descInput">
+    <button id="submitDesc">Submit</button>
+    <p id="desc"></p>
+    <a href="webpage.html">Go to home page</a>
+    <script> 
+        document.getElementById("submitDesc").addEventListener("click", function() {
+            let inputDesc = document.getElementById("descInput").value;
+            localStorage.setItem("Description", inputDesc);
+            document.getElementById("desc").innerText = "You entered: " + inputDesc;
+        });
+        
+    </script>
+    <div class="content">
+        <div class="column1">
+            <h3>Calendar</h3>
+            <div class="calendar"></div>
+                <!-- Calendar API Integration will go here -->
+                
+                <p>Insert calendar here</p>
+        </div>
+        <div class="column2">
+            <h3>Quote of the Day</h3>
+            <div class="quote"></div>
+                <!-- PyScript CSS -->
+                <link rel="stylesheet" href="https://pyscript.net/releases/2024.5.2/core.css">
+                <!-- This script tag bootstraps PyScript -->
+                <script type="module" src="https://pyscript.net/releases/2024.5.2/core.js"></script>
+            </head>
+            <body>
+                <script>
+                  async function getRandomQuote() {
+                      const url = "https://raw.githubusercontent.com/saip007/inspirational-quotes/main/inspirational_quotes/quotes.json";
+                  
+                      try {
+                          const response = await fetch(url);
+                          if (!response.ok) {
+                              throw new Error(`HTTP error! Status: ${response.status}`);
+                          }
+                          
+                          const quotes = await response.json();
+                          
+                          if (!Array.isArray(quotes) || quotes.length === 0) {
+                              throw new Error("Invalid quote data");
+                          }
+                          
+                          const randomIndex = Math.floor(Math.random() * quotes.length);
+                          return quotes[randomIndex]; // Returns an object with 'quote' and 'author' properties
+                      } catch (error) {
+                          console.error("Error fetching quotes:", error);
+                          return { quote: "No quote available", author: "Unknown" };
+                      }
+                  }
+                  document.getElementById("column2").innerText = getRandomQuote();
+
+                </script>
+            </body>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Developed by sesqui细летки<br>All rights reserved or smth</p>
+    </footer>
+</body>
+</html>
