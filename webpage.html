@@ -129,6 +129,23 @@
     </header>
     <div class = "intro">Please include the full date, name and a short explanation of the event/holiday. This description can include cultural significance, or a story (real or legend) of what took place.</div>
 
+    
+    <h2>Retrieved Data:</h2>
+    <p id="receivedDate"></p>
+    <p id="receivedDesc"></p>
+    <a href="wptest.html">Back to input page</a>
+
+    <script>
+        let date = localStorage.getItem("Date");
+        let description = localStorage.getItem("Description");
+        
+        document.getElementById("receivedDate").innerText = date ? "Date: " + date : "No data saved yet!";
+        
+        document.getElementById("receivedDesc").innerText = description ? "Description: " + description : "No data saved yet!";
+
+    </script>
+
+    
 
     <div class="content">
         <div class="column1">
