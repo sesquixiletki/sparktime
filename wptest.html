@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SparkTime</title>
@@ -135,6 +134,8 @@
         <div class="column2">
             <h3>Quote of the Day</h3>
             <div class="quote">
+                <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
                 <py-script>
                 def get_quote():
                     site = requests.get("https://thequoteshub.com/api/tags/tomorrow")
