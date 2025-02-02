@@ -165,7 +165,7 @@
         </div>
         <div class="column2">
             <h3>Quote of the Day</h3>
-            <div class="quote"></div>
+            <div class="quote">
                 <!-- PyScript CSS -->
                 <link rel="stylesheet" href="https://pyscript.net/releases/2024.5.2/core.css">
                 <!-- This script tag bootstraps PyScript -->
@@ -195,11 +195,12 @@
                           return { quote: "No quote available", author: "Unknown" };
                       }
                   }
-                  ('quote').innerText = getRandomQuote();
+                  'quote'.innerText = getRandomQuote();
 
                 </script>
-            </body>
+                </div>
 
+            </body>
         </div>
     </div>
 
