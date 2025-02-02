@@ -137,7 +137,9 @@
                 <p>baguetttttttttttttttttte!!</p>
                 <script>
                     document.addEventListener("DOMContentLoaded", function () {
-                        const apiUrl = 'https://thequoteshub.com/api/tags/tomorrow';
+                        //const apiUrl = 'https://thequoteshub.com/api/tags/tomorrow';
+                        const apiUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://thequoteshub.com/api/tags/tomorrow');
+
                         const outputElement = document.getElementById('quote'); // Select the correct element
             
                         fetch(apiUrl)
