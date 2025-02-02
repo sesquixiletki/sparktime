@@ -135,9 +135,8 @@
             <h3>Quote of the Day</h3>
             <div class="quote"> 
                 <script>
-                  var index = Math.floor(Math.random() * choices.length);
                   const apiUrl = 'https://thequoteshub.com/api/tags/tomorrow';
-                  const outputElement = document.getElementById('quotes')[index]['text'];
+                  const outputElement = document.getElementById('quotedisplay');
                   
                   fetch(apiUrl)
                     .then(response => {
@@ -147,8 +146,11 @@
                       return response.json();
                     })
                     .then(data => {
+                        if(data.length >0){
+                            const index = Math.floor(Math.random() * data.length);
+                        }
                       // Display data in an HTML element
-                      outputElement.textContent = JSON.stringify(data, null, 2);
+                      outputElement.textContent = data[index].text;
                     })
                     .catch(error => {
                       console.error('Error:', error);
