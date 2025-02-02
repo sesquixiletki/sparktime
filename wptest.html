@@ -127,14 +127,27 @@
     <header>
         <h1><a href="https://sesquixiletki.github.io/sparktime">SparkTime</a></h1>
     </header>
-    <label for="userInput">Enter date:</label>
-    <input type="text" id="userInput">
-    <button id="submitButton">Submit</button>
-    <p id="output"></p>
+
+    <label for="dateInput">Enter date:</label>
+    <input type="text" id="dateInput">
+    <button id="submitDate">Submit</button>
+    <p id="date"></p>
     <script> 
-        document.getElementById("submitButton").addEventListener("click", function() {
-            let inputText = document.getElementById("userInput").value;
-            document.getElementById("output").innerText = "You entered: " + inputText;
+        document.getElementById("submitDate").addEventListener("click", function() {
+            let inputDate = document.getElementById("dateInput").value;
+            document.getElementById("date").innerText = "You entered: " + inputDate;
+        });
+        
+    </script>
+
+    <label for="descInput">Enter description:</label>
+    <input type="text" id="descInput">
+    <button id="submitDesc">Submit</button>
+    <p id="desc"></p>
+    <script> 
+        document.getElementById("submitDesc").addEventListener("click", function() {
+            let inputDesc = document.getElementById("descInput").value;
+            document.getElementById("desc").innerText = "You entered: " + inputDesc;
         });
         
     </script>
