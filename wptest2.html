@@ -136,30 +136,29 @@
             <div class="quote"> 
                 <p>baguetttttttttttttttttte!!</p>
                 <script>
-                  const apiUrl = 'https://thequoteshub.com/api/tags/tomorrow';
-                  const outputElement = document.getElementById('quotedisplay');
-                  
-                  fetch(apiUrl)
-                    .then(response => {
-                      if (!response.ok) {
-                        throw new Error('oof skill issue');
-                      }
-                      return response.json();
-                    })
-                    .then(data => {
-                        if(data.length >0){
-                            outputElement.textContent = "CHOCOATE BRED OR SOMETHING";
-
-                            // const index = Math.floor(Math.random() * data.length);
-                        }
-                        else{
-                            outputElement.textContent = "BLUEBERRY BRED";
-                        }
-                      // Display data in an HTML element
-                      // outputElement.textContent = "BAGUETTE OR SOMETHING";
-                    })
-                    .catch(error => {
-                      console.error('Error:', error);
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const apiUrl = 'https://thequoteshub.com/api/tags/tomorrow';
+                        const outputElement = document.getElementById('quotes'); // Select the correct element
+            
+                        fetch(apiUrl)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('oof skill issue'); // Error message
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                if (data.length > 0) {
+                                    const randomIndex = Math.floor(Math.random() * data.length); // Pick a random quote
+                                    outputElement.textContent = data[randomIndex].text; // Display the quote
+                                } else {
+                                    outputElement.textContent = "No quotes found.";
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                outputElement.textContent = "Failed to load quote.";
+                            });
                     });
                 </script>
 
