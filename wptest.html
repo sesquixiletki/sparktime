@@ -176,13 +176,15 @@
 from pyodide.http import pyfetch
 import asyncio
 import random
+from pyscript import display
+
 async def get_quote():
     site = await pyfetch(url="https://thequoteshub.com/api/tags/tomorrow", method="GET")
     data = site.json()
     quote = random.choice(data['quotes'])
     return (quote['text'] + " - " + quote['author']) 
 w = get_quote()
-print(w)
+display(w)
                 </py-script>
             </body>
 <!--             Element('quote').element.innerText = w
