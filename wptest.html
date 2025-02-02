@@ -158,10 +158,10 @@
     <div class="content">
         <div class="column1">
             <h3>Calendar</h3>
-            <div class="calendar">
+            <div class="calendar"></div>
                 <!-- Calendar API Integration will go here -->
+                
                 <p>Insert calendar here</p>
-            </div>
         </div>
         <div class="column2">
             <h3>Quote of the Day</h3>
@@ -182,14 +182,16 @@
                         return (quote['text'] + " - " + quote['author']) 
                     # print(tell_joke())
                     w = get_quote()
-                    print(e)
-                    display(e)
-                    Element('quote').element.innerText = e
+                    pyscript.write('quote', w)
+
+                    print(w)
+                    display(w)
+                    Element('quote').element.innerText = w
                 </py-script>
+                
             </body>
         </div>
     </div>
-    
 
     <footer>
         <p>Developed by sesqui细летки<br>All rights reserved or smth</p>
