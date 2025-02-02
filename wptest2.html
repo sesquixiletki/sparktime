@@ -150,7 +150,7 @@
                             const index = Math.floor(Math.random() * data.length);
                         }
                       // Display data in an HTML element
-                      outputElement.textContent = data[index].text;
+                      outputElement.textContent = data['quotes'][index]['text'].text;
                     })
                     .catch(error => {
                       console.error('Error:', error);
