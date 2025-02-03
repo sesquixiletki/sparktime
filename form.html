@@ -131,13 +131,14 @@
     <div class = "intro">
 
         <h1>Form</h1>
+      <button id="onegiantsubmit">Submit</button>
+      
         <p>Please enter the date of your event, as well as a description!</p>
         <label for="dateInput">Enter date:</label>
         <input type="text" id="dateInput">
-        <button id="submitDate">Submit</button>
         <p id="date"></p>
         <script> 
-            document.getElementById("submitDate").addEventListener("click", function() {
+            document.getElementById("onegiantsubmit").addEventListener("click", function() {
                 let inputDate = document.getElementById("dateInput").value;
                 localStorage.setItem("Date", inputDate);
                 document.getElementById("date").innerText = "You entered: " + inputDate;
@@ -147,10 +148,9 @@
     
         <label for="descInput">Enter description:</label>
         <input type="text" id="descInput">
-        <button id="submitDesc">Submit</button>
         <p id="desc"></p>
         <script> 
-            document.getElementById("submitDesc").addEventListener("click", function() {
+            document.getElementById("onegiantsubmit").addEventListener("click", function() {
                 let inputDesc = document.getElementById("descInput").value;
                 localStorage.setItem("Description", inputDesc);
                 document.getElementById("desc").innerText = "You entered: " + inputDesc;
