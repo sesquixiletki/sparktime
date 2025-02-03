@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkTime</title>
+    <style>
+        /* General reset and body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0 auto;
+            
+            padding: 0;
+            background-color: #334455;
+            color: white;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #F07023;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: inherit;
+            font-family: "Arial black", Gadget, sans-serif;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        /* Main content container */
+        .intro {
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 2;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #556677;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .column1 {
+            background-color: #556677;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 2;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+         .column2 {
+            /*height: 100%;  Set container width */
+            width: 100%; /* Full width */
+            min-height: 300px; /* Ensures a minimum height (optional) */
+            background-image: url('final orange pic.webp');
+            background-size: auto 100%; /* Height always matches div, width adjusts */
+            background-repeat: no-repeat;
+            background-position: center; /* Centers the image horizontally */
+            overflow: hidden; /* Ensures no unwanted scrollbars */
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .column h3 {
+            margin-top: 0;
+            color: #F07023;
+        }
+
+        .calendar{
+            background-color: #F4F4F4;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            height: 250px; /* Adjust as necessary for content */
+            overflow-y: auto;
+        }
+        .quote {
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            height: 250px; /* Adjust as necessary for content */
+            overflow-y: auto;
+        }
+
+
+        .calendar {
+            background-color: #ffffff;
+        }
+
+        .quote {
+            font-style: italic;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #F07023;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="https://sesquixiletki.github.io/sparktime">SparkTime</a></h1>
+    </header>
+    <div class = "intro">
+
+        <h1>Form</h1>
+      <button id="onegiantsubmit">Submit</button>
+      
+        <p>Please enter the date of your event, as well as a description!</p>
+        <label for="dateInput">Enter date:</label>
+        <input type="text" id="dateInput">
+        <p id="date"></p>
+        <script> 
+            document.getElementById("onegiantsubmit").addEventListener("click", function() {
+                let inputDate = document.getElementById("dateInput").value;
+                localStorage.setItem("Date", inputDate);
+                document.getElementById("date").innerText = "You entered: " + inputDate;
+            });
+            
+        </script>
+    
+        <label for="descInput">Enter description:</label>
+        <input type="text" id="descInput">
+        <p id="desc"></p>
+        <script> 
+            document.getElementById("onegiantsubmit").addEventListener("click", function() {
+                let inputDesc = document.getElementById("descInput").value;
+                localStorage.setItem("Description", inputDesc);
+                document.getElementById("desc").innerText = "You entered: " + inputDesc;
+            });
+            
+        </script>
+
+        <a href="webpage.html"> 
+        <button> back to main page </button> </a>
+        
+    </div>
+    
+
+    <footer>
+        <p>Developed by sesqui细летки<br>All rights reserved ©</p>
+    </footer>
+</body>
+</html>
